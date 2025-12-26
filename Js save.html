@@ -6,7 +6,7 @@ document.getElementById("area1").innerText = num1;
 
 document.addEventListener("keydown", () => {
 if (event.keyCode === 90){
-fetch('save data script.js').then(r=>{return r.text()}).then(t=>{
+fetch('createdData.js').then(r=>{return r.text()}).then(t=>{
 
     eval(t); //実行
 load();
@@ -24,5 +24,6 @@ num1[i] = Sdata1[i];
 
 }
 </script> 
+
 
 </html>
