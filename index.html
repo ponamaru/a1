@@ -5,8 +5,14 @@ var num1 = ["a","b","c","d"];
 document.getElementById("area1").innerText = num1;
 
 document.addEventListener("keydown", () => {
+    let dataJsFile;
 if (event.keyCode === 90){
-fetch('createdData.js').then(r=>{return r.text()}).then(t=>{
+    dataJsFile = 'createdData.js';
+}
+    if (event.keyCode === 88){
+    dataJsFile = 'createdData2.js';
+}
+fetch(dataJsFile).then(r=>{return r.text()}).then(t=>{
 
     eval(t); //実行
 if(num1.length > Sdata1.length)num1.length = Sdata1.length;
@@ -15,8 +21,6 @@ num1[i] = Sdata1[i];
 }
     document.getElementById("area1").innerText = num1;
 });
-
-}
 
 });
 
@@ -31,5 +35,6 @@ num1[i] = Sdata1[i];
 
 
 </html>
+
 
 
