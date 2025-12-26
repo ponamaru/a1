@@ -9,7 +9,10 @@ if (event.keyCode === 90){
 fetch('createdData.js').then(r=>{return r.text()}).then(t=>{
 
     eval(t); //実行
-load();
+if(num1.length > Sdata1.length)num1.length = Sdata1.length;
+for (let i= 0; i < Sdata1.length; i++) {
+num1[i] = Sdata1[i];
+}
 });
 
 }
@@ -27,3 +30,4 @@ num1[i] = Sdata1[i];
 
 
 </html>
+
