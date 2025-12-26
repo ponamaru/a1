@@ -1,0 +1,28 @@
+<html>
+<div id="area1"></div>
+<script>
+var num1 = ["a","b","c","d"];
+document.getElementById("area1").innerText = num1;
+
+document.addEventListener("keydown", () => {
+if (event.keyCode === 90){
+fetch('save data script.js').then(r=>{return r.text()}).then(t=>{
+
+    eval(t); //実行
+load();
+});
+
+}
+
+});
+
+function load() {
+if(num1.length > Sdata1.length)num1.length = Sdata1.length;
+for (let i= 0; i < Sdata1.length; i++) {
+num1[i] = Sdata1[i];
+}
+
+}
+</script> 
+
+</html>
